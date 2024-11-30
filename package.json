@@ -1,0 +1,16 @@
+{
+  "name": "joypad.js test",
+  "version": "0.1.0",
+  "description": "joypad.js test",
+  "main": "app.mjs",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "D.F.Mac.@TripArts Music <tadfmac@gmail.com> (https://mz4u.net/)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.1",
+    "joypad.js": "^2.3.5"
+  }
+}

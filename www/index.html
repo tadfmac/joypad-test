@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+<title>joypad.js example</title>
+</head>
+<body>
+<div id="connection">disconnected</div>
+<div id="btn"></div>
+<script type="module">
+import "/node_modules/joypad.js/dist/joypad.min.js";
+
+const $connection = document.querySelector("#connection");
+const $btn = document.querySelector("#btn");
+
+joypad.on('connect', (e) => {
+  console.log("name="+e.gamepad.id);
+  $connection.innerHTML = "connected";
+
+});
+
+joypad.on('disconnect', (e) => {
+  console.log("name="+e.gamepad.id);
+  $connection.innerHTML = "disconnected";
+});
+
+joypad.on('button_press', (e) => {
+  console.log(e.detail.buttonName);
+  $btn.innerHTML = e.detail.buttonName;
+});
+
+</script>  
+</body>
+</html>
