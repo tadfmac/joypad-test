@@ -1,0 +1,2 @@
+# joypad-test
+joypad.jsのテスト
